@@ -12,10 +12,12 @@ categories:
 
 在CentOS6.2操作系统下，安装VPN步骤如下：
 
-1、下载CentOS专用vpn安装包，可以直接通过wget命令获取：
-_wget http://www.hi-vps.com/shell/vpn_centos6.sh_
+1. 下载CentOS专用vpn安装包，可以直接通过wget命令获取：
 
-2、执行vpn_centos6.sh，根据提示按1即可开始安装：
-_bash vpn_centos6.sh_
+    _wget http://www.hi-vps.com/shell/vpn_centos6.sh_
 
-3、安装完成后，会出现默认的vpn账号和密码，如需修改密码可在**/etc/ppp/chap-secrets**文件中修改即可。
+2. 执行vpn_centos6.sh，根据提示按1即可开始安装：
+
+    _bash vpn_centos6.sh_
+
+3. 安装完成后，会出现默认的vpn账号和密码，如需修改密码可在**/etc/ppp/chap-secrets**文件中修改即可。

@@ -11,17 +11,17 @@ categories:
 ---
 
 最近用wordpress3.5.1弄个人网站，在Settings->Permalinks中设置完固定链接的格式后，发现网站上所有的超链接都无法访问，在google中搜索后，发现问题在.htaccess文件和httpd.conf文件的配置问题，httpd.conf文件需要修改以下两个地方是：
-1、
-_<Directory />_
-_ Options FollowSymLinks_
-_ #AllowOverride NONE 需要将NONE改为All_
-_ AllowOverride All_
-_ </Directory>_
-2、
-_<Directory "/var/www/html">_
-_ Options Indexes FollowSymLinks_
-_ #AllowOverride NONE 需要将NONE改为All_
-_ AllowOverride All_
-_ </Directory>_
+1. 
+    _<Directory />_
+    _Options FollowSymLinks_
+    _ #AllowOverride NONE 需要将NONE改为All_
+    _ AllowOverride All_
+    _ </Directory>_
+2.
+    _<Directory "/var/www/html">_
+    _ Options Indexes FollowSymLinks_
+    _ #AllowOverride NONE 需要将NONE改为All_
+    _ AllowOverride All_
+    _ </Directory>_
 
 但是，按照上面修改后重启httpd后问题仍然存在，而且在_Settings->Permalinks_修改链接格式时，会提示需要手动更新，但是.htaccess文件的权限已经改为666，怎么会不可写呢？经过一番研究之后发现问题是.htaccess文件放置的路径不对导致的，网上的许多解答都没有提到此文件的路径，所以导致忽略了这个问题。那么，.htaccess文件已经放在哪里呢？答案是：放到网站根目录，即/var/www/html，修改之后在_Settings->Permalinks_修改链接格式就会发现可以自动更新了。<!-- more -->
