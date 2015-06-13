@@ -12,6 +12,7 @@ tags:
 1. 从wordpress中导出所有的Blog，格式为xml;
 
 2. 将xml转换为md(markdown)格式，这里需要用到一个工具[exitwp](https://github.com/thomasf/exitwp), 具体用法如下:
+
    * 先将clone下来exitwp, 将wordpress导出的Blog备份文件(xml)拷贝到wordpress-xml目录下
    * 执行python exitwp.py, 有可能会报依赖包缺失的错误，主要依赖PyYAML和BeautifulSoup
    * mac下先安装pip，执行_easy_install pip_
