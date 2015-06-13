@@ -3,7 +3,7 @@ title: 从wordpress到jekyll博客迁移
 layout: post
 guid: urn:uuid:618de5cf-2be6-425d-83f2-034c55205d8a
 tags:
-  -
+  - WordPress
 ---
 
 最近在github上搭建了一个Blog，用的jekyll+Github Pages。那么问题来了，wordpress上的博客是否可以迁移过来呢？
