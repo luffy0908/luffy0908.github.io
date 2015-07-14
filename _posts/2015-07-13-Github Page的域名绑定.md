@@ -11,7 +11,12 @@ tags:
 
 ### 1.在github根目录建立CNAME文件, 加入你的域名如下:
 
-> www.xxx.com
+> xxx.com
 
-### 2.登陆域名提供商网站设置DNS解析即可.
+### 2.登陆域名提供商网站设置DNS解析即可. 本人是在[Godaddy]{https://www.godaddy.com}上注册的域名, 只需要登录Godaddy找到  DNS ZONE FILE页签, 增加两条记录即可, 其中Points To为对应github.io的ip地址, Ping下就知道了, 如下:
+
+｜Record Type | Host | Points To |
+|---|---|---|
+| A | @ | xxx.xxx.xxx.xxx |
+| A |WWW| xxx.xxx.xxx.xxx |
 
