@@ -16,26 +16,47 @@ tags:
 ### 2.配置php
 解压下载的php安装包到指定目录, 找到php.ini-development改名为php.ini, 并修改配置如下:
 修改php扩展包路径, 找到
+
 > ; On windows:
+
 > ; extension_dir = "ext"
+
 改为
+
 > ; On windows:
+
 > extension_dir = "d:/php/ext"
+
 开启MySQL支持, 找到
+
 > ;extension=php_curl.dll
+
 > ;extension=php_gd2.dll
+
 > ;extension=php_mbstring.dll
+
 > ;extension=php_mysql.dll
+
 > ;extension=php_pdo_mysql.dll
+
 > ;extension=php_pdo_odbc.dll
+
 > ;extension=php_xmlrpc.dll
+
 改为
+
 > extension=php_curl.dll
+
 > extension=php_gd2.dll
+
 > extension=php_mbstring.dll
+
 > extension=php_mysql.dll
+
 > extension=php_pdo_mysql.dll
+
 > extension=php_pdo_odbc.dll
+
 > extension=php_xmlrpc.dll
 
 ## 二、安装&配置Apache
@@ -54,15 +75,23 @@ tags:
 ### 2.配置Apache
 下载完成之后解压到指定目录, 然后打开conf目录下的httpd.conf配置文件, 修改配置如下:
 要支持php, 需将
+
 > DirectoryIndex index.html
+
 改为
->
-DirectoryIndex index.php index.html
+
+> DirectoryIndex index.php index.html
+
 另外, 找到
+
 > #LoadModule vhost_alias_module modules/mod_vhost_alias.so
+
 在这行下面添加php的支持(注意dll文件的路径)
+
 > LoadModule php5_module "d:/php/php5apache2_4.dll"
+
 > PHPIniDir "d:/php"
+
 > AddType application/x-httpd-php .php .html .htm
 
 ## 三、安装MySQL
@@ -70,7 +99,9 @@ DirectoryIndex index.php index.html
 
 ## 四、测试
 配置完成之后, 重启Apache服务, 并在htdocs目录下添加index.php文件, 内容如下:
+
 > <?php phpinfo(); ?>
+
 注意:htdocs默认在Apache安装目录下, 可以通过httpd.conf修改其路径。
 
 
